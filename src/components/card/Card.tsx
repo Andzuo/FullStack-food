@@ -1,4 +1,3 @@
-
 interface CardProps {
     price: number,
     title: string,
@@ -8,9 +7,9 @@ interface CardProps {
 export function Card({ price, image, title } : CardProps){
     return(
         <div className="flex flex-col items-center justify-center w-64 rounded-lg p-0 shadow-black">
-            <img src={image}/>
+            <img className="rounded w-64 h-60" src={image}/>
             <h2>{title}</h2>
-            <p><b>Valor:</b>{price}</p>
+            <p><b>Valor: </b>{"R$" + price + ",00"}</p>
         </div>
     )
 }
