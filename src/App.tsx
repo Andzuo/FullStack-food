@@ -11,6 +11,7 @@ function App() {
       <div className="grid grid-cols-3 gap-5 mt-10">
         {data?.map(foodData => 
           <Card
+            key={foodData.id}
             price={foodData.price} 
             title={foodData.title} 
             image={foodData.image}
